@@ -1,0 +1,56 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+int m,n,i,j;
+int matrix[10][10];
+printf("enter no.of rows:");
+scanf("%d",&m);
+printf("enter no.of column:");
+scanf("%d",&n);
+int**a;
+/** Allocate memory to Matrix**/
+a=(int**)malloc(m*size of( int*));
+for(int i=0;i<m;i++)
+{
+  a[i]=(int*)malloc(n* size of (int));
+}
+/**input data in matrix **/
+for(i=0;i<m;i++)
+{ 
+  for(j=0;j<n;j++)
+   {
+     printf("enter data in [%d][%d] : ",i,j);
+     scanf("%d", &matrix[i][j]);
+    }
+ }
+ /** Display the matrix **/
+ for (i=0;i<m;i++)
+ {
+  for(j=0;j<n;j++)
+   {
+    printf("%d\t", matrix[i][j]);
+    }
+  }
+ printf("\n");
+ }
+ /** Delocating memory of matrix **/
+ for(i=0;i<m;i++)
+ {
+ free(a[i]);
+ }
+ free(a);
+ /** TO AD DIAGONAL ELEMENTS **/
+ for(i=0;i<m;i++)
+ {
+  for(j=0;j<n;j++)
+  {
+    if (i==j)
+    {
+      sum=sum + matrix[i][j];
+     }
+  }
+}
+printf("sum of diagonal elements= %d\n", sum);
+return 0
+}
